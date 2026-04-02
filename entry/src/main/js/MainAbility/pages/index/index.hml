@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="captured-row">
+        <image class="cap-img" src="{{$item.img}}" for="{{capW}}" tid="k"></image>
+    </div>
+    <text class="status" if="{{!showMenu}}">{{status}}</text>
+    <stack class="board">
+        <div class="grid">
+            <div class="row">
+                <div class="cell" style="background-color: {{$item.bg}};" for="{{row0}}" tid="k" onclick="onCell({{$item.k}})">
+                    <image class="piece-img" src="{{$item.img}}" if="{{$item.hasImg}}"></image>
+                    <div class="move-dot" if="{{$item.isDot}}"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell" style="background-color: {{$item.bg}};" for="{{row1}}" tid="k" onclick="onCell({{$item.k}})">
+                    <image class="piece-img" src="{{$item.img}}" if="{{$item.hasImg}}"></image>
+                    <div class="move-dot" if="{{$item.isDot}}"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell" style="background-color: {{$item.bg}};" for="{{row2}}" tid="k" onclick="onCell({{$item.k}})">
+                    <image class="piece-img" src="{{$item.img}}" if="{{$item.hasImg}}"></image>
+                    <div class="move-dot" if="{{$item.isDot}}"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell" style="background-color: {{$item.bg}};" for="{{row3}}" tid="k" onclick="onCell({{$item.k}})">
+                    <image class="piece-img" src="{{$item.img}}" if="{{$item.hasImg}}"></image>
+                    <div class="move-dot" if="{{$item.isDot}}"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell" style="background-color: {{$item.bg}};" for="{{row4}}" tid="k" onclick="onCell({{$item.k}})">
+                    <image class="piece-img" src="{{$item.img}}" if="{{$item.hasImg}}"></image>
+                    <div class="move-dot" if="{{$item.isDot}}"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell" style="background-color: {{$item.bg}};" for="{{row5}}" tid="k" onclick="onCell({{$item.k}})">
+                    <image class="piece-img" src="{{$item.img}}" if="{{$item.hasImg}}"></image>
+                    <div class="move-dot" if="{{$item.isDot}}"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell" style="background-color: {{$item.bg}};" for="{{row6}}" tid="k" onclick="onCell({{$item.k}})">
+                    <image class="piece-img" src="{{$item.img}}" if="{{$item.hasImg}}"></image>
+                    <div class="move-dot" if="{{$item.isDot}}"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell" style="background-color: {{$item.bg}};" for="{{row7}}" tid="k" onclick="onCell({{$item.k}})">
+                    <image class="piece-img" src="{{$item.img}}" if="{{$item.hasImg}}"></image>
+                    <div class="move-dot" if="{{$item.isDot}}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-overlay" if="{{showMenu}}">
+            <text class="menu-title">Chess Lite</text>
+            <text class="menu-sub">Select Difficulty</text>
+            <div class="diff-easy" onclick="setEasy">
+                <text class="diff-lbl">Easy</text>
+            </div>
+            <div class="diff-med" onclick="setMedium">
+                <text class="diff-lbl">Medium</text>
+            </div>
+            <div class="diff-hard" onclick="setHard">
+                <text class="diff-lbl">Hard</text>
+            </div>
+        </div>
+        <div class="promo-overlay" if="{{showPromo}}">
+            <text class="promo-title">Promote</text>
+            <div class="promo-row">
+                <div class="promo-opt" onclick="promoteQueen">
+                    <image class="promo-img" src="{{promoQ}}"></image>
+                </div>
+                <div class="promo-opt" onclick="promoteRook">
+                    <image class="promo-img" src="{{promoR}}"></image>
+                </div>
+                <div class="promo-opt" onclick="promoteBishop">
+                    <image class="promo-img" src="{{promoB}}"></image>
+                </div>
+                <div class="promo-opt" onclick="promoteKnight">
+                    <image class="promo-img" src="{{promoN}}"></image>
+                </div>
+            </div>
+        </div>
+    </stack>
+    <div class="captured-row">
+        <image class="cap-img" src="{{$item.img}}" for="{{capB}}" tid="k"></image>
+    </div>
+    <div class="btn-row" if="{{!showMenu}}">
+        <div class="resetbtn" onclick="onReset">
+            <text class="btnlbl">New</text>
+        </div>
+    </div>
+</div>
